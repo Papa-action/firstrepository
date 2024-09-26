@@ -34,7 +34,34 @@ public class GitHub {
                 || password.contains("?");
     }
 
+        //this method will return true if checkPasswordComplexity and checkUserName both return true 
+        public void registerUser(String Name ,String password){ 
+                if(checkUserName(Name)&&checkPasswordComplexity(password)){
+                    System.out.println("Username and Password correctly formatted");
+                }else{
+                    System.out.println("The username is incorrectlty formatted or"
+                            + "The password does not meet complexity requirements");
+                }
+            }
 
+        
+        //this method will return true if username and password are re-entered correctly
+        boolean loginUser(String createPassword, String createUsername, String password, String Name){
+            
+        return createPassword.equals(password) && createUsername.equals(Name);   
+        }
+        
+        
+       // this method will return login status if loginUser returns true 
+       public String returnLoginStatus(String createPassword, String createUsername, String Name ,String password){
+            
+           if (loginUser(createPassword,createUsername, password, Name)){
+                return "Successful login";
+            }else{
+                return "Failed login";
+            }
+
+       }
 
 
 
