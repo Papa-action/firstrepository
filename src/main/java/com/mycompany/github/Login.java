@@ -8,8 +8,23 @@ package com.mycompany.github;
  *
  * @author User
  */
-public class GitHub {
+public class Login {
+String Name;
+String password;
+String createPassword; 
+String createUsername;
 
+ public Login(String Name, String password, String createPassword, String createUsername){
+        this.Name = Name;
+        this.password = password;
+        this.createPassword = createPassword;
+        this.createUsername = createUsername;
+        
+}
+
+    Login() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
             boolean checkUserName(String Name){
          if (Name == null) {
             return false; // Return false if username does not contain an underscore and more than 5 characters long
